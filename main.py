@@ -9,7 +9,7 @@ async def write_to_csv(key, address, result):
     with open('result.csv', 'a', newline='') as file:
         writer = csv.writer(file)
 
-        if file.tell() == 0:
+        if file.tell() == 1:
             writer.writerow(['key', 'address', 'result'])
 
         writer.writerow([key, address, result])
